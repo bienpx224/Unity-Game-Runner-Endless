@@ -6,9 +6,11 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject _groupPressStartGame;
     private Constants.GameState _gameState;
-    public Constants.GameState GameState { 
-        get { return _gameState; } 
-        set { _gameState = value; } }
+    public Constants.GameState GameState
+    {
+        get { return _gameState; }
+        set { _gameState = value; }
+    }
     void Awake()
     {
         /* Cần phải base.Awake để thực thi function cha */
@@ -17,13 +19,30 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {
-
+        GameState = Constants.GameState.IS_READY;
     }
-    public void OnPressStartGame(){
+    void Update()
+    {
+        if (GameState == Constants.GameState.IS_READY)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameManager.Instance.GameState = Constants.GameState.IS_PLAYING;
+            }
+        }else if(GameState == Constants.GameState.IS_PLAYING){
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                OnRestartGame();
+            }
+        }
+    }
+    public void OnPressStartGame()
+    {
         GameState = Constants.GameState.IS_PLAYING;
         _groupPressStartGame.SetActive(false);
     }
-    public void OnRestartGame(){
+    public void OnRestartGame()
+    {
         GameState = Constants.GameState.IS_READY;
         _groupPressStartGame.SetActive(true);
     }
