@@ -45,6 +45,13 @@ public class GameManager : Singleton<GameManager>
     {
         GameState = Constants.GameState.IS_READY;
         _groupPressStartGame.SetActive(true);
+        
+    }
+    public void OnDead(){
+        OnRestartGame();
+    }
+    public void OnWin(){
+
     }
 
 }
