@@ -283,3 +283,5 @@ MonoBehaviour:
   _speed: 10
   _damage: 5
   _direction: {fileID: 2602689427245874312}
+  _prefabFxHit: {fileID: 1179503476551217728, guid: 18613cdff67aa4bf486e09c07d8448d1,
+    type: 3}

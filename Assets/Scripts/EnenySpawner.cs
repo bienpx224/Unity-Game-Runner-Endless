@@ -42,7 +42,7 @@ public class EnenySpawner : Singleton<EnenySpawner>
     {
         _nextSpawnTime = Time.time + _spawnTime;
 
-        Vector3 enemyPosition = new Vector3(Random.Range(0f, 1f), _spawnPoint.position.y, _spawnPoint.position.z);
+        Vector3 enemyPosition = new Vector3(Random.Range(-0.5f, 1.5f), _spawnPoint.position.y, _spawnPoint.position.z);
         
         Enemy enemy = LeanPool.Spawn(_prefabEnemy, enemyPosition, Quaternion.identity).GetComponent<Enemy>();
         _listSpawning.Add(enemy);
