@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class Constants
 {
+    public const string LAYER_OVERLAY_NAME = "Default";
     public enum GameState
     {
         IS_READY, IS_PLAYING, IS_STOPPED, IS_ENDED
