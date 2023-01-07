@@ -164,6 +164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1543374776}
   - {fileID: 377312633}
   - {fileID: 1083194407}
   - {fileID: 435737658}
@@ -201,7 +202,7 @@ Transform:
   m_Children:
   - {fileID: 1787920918}
   m_Father: {fileID: 96848831}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121653226
 GameObject:
@@ -795,7 +796,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 96848831}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &377312634
 MonoBehaviour:
@@ -1079,7 +1080,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 96848831}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1083194408
 MonoBehaviour:
@@ -1503,6 +1504,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362458748}
   m_CullTransparentMesh: 1
+--- !u!1 &1543374775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543374776}
+  - component: {fileID: 1543374777}
+  m_Layer: 0
+  m_Name: Sound Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1543374776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543374775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 96848831}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543374777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543374775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0847f3e2117634fabb7a1bb18c0e2af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPersistence: 0
+  Music_Main: {fileID: 8300000, guid: 523f93e4829d858499a0283953cc18f3, type: 3}
+  Sfx_Show_Popup: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Hide_Popup: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Btn_Click: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Btn_Click_Disabled: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148,
+    type: 3}
+  Sfx_Collect_Gold: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Collect_Coin: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Select: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Unlock: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Message: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Skill_1: {fileID: 8300000, guid: ad7c48dc9f5230d4fbf7c8e72549c148, type: 3}
+  Sfx_Battle_BG: {fileID: 8300000, guid: 523f93e4829d858499a0283953cc18f3, type: 3}
+  Sfx_Battle_Lost: {fileID: 0}
+  Sfx_Battle_Win: {fileID: 0}
+  sfx_music_main: 0
+  sfx_music_battle: 0
 --- !u!65 &1553685773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2158,7 +2221,7 @@ PrefabInstance:
     - target: {fileID: 9013266294618839051, guid: de88de2f5947e4f9da063cd2a46adb0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9013266294618839051, guid: de88de2f5947e4f9da063cd2a46adb0d,
         type: 3}

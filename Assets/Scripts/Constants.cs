@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class Constants
 {
+    public const string IS_MUSIC_ON = "IS_MUSIC_ON";
+    public const string IS_SOUND_ON = "IS_SOUND_ON";
     public const string LAYER_OVERLAY_NAME = "Default";
     public enum GameState
     {

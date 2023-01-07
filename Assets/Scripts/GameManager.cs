@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Hellmade.Sound;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -20,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         GameState = Constants.GameState.IS_READY;
+        EazySoundManager.GetMusicAudio(Sounds.Instance.sfx_music_main).Play();
     }
     void Update()
     {

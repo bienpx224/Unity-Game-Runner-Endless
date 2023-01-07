@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Lean.Pool;
+using Hellmade.Sound;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
@@ -81,6 +82,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnDead()
     {
+        EazySoundManager.PlaySound(Sounds.Instance.Sfx_Collect_Coin);
         EnenySpawner.Instance.RemoveEnemyInList(this);
         Destroy(gameObject);
     }
