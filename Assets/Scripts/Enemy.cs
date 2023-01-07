@@ -83,7 +83,7 @@ public class Enemy : MonoBehaviour
     private void OnDead()
     {
         EazySoundManager.PlaySound(Sounds.Instance.Sfx_Collect_Coin);
-        EnenySpawner.Instance.RemoveEnemyInList(this);
+        EnemySpawner.Instance.RemoveEnemyInList(this);
         Destroy(gameObject);
     }
     private void OnTouchPlayer()

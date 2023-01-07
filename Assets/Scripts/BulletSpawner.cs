@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Lean.Pool;
 
-public class BulletSpawner :  Singleton<EnenySpawner>
+public class BulletSpawner :  Singleton<BulletSpawner>
 {
     [SerializeField] private BulletBase _prefabBullet;
     [SerializeField] private Transform _bulletSpawnPoint;

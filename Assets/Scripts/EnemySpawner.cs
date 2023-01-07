@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Lean.Pool;
 
-public class EnenySpawner : Singleton<EnenySpawner>
+public class EnemySpawner : Singleton<EnemySpawner>
 {
     [SerializeField] private Enemy _prefabEnemy;
     [SerializeField] private Transform _spawnPoint;
