@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - DeadWall
   - Enemy
+  - BoundWall
   layers:
   - Default
   - TransparentFX

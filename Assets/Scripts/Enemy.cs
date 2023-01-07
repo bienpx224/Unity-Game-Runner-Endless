@@ -52,7 +52,9 @@ public class Enemy : MonoBehaviour
         else if (collision.gameObject.tag == "Bullet")
         {
             OnGetHit();
-
+        }else if(collision.gameObject.tag == "DeadWall")
+        {
+            OnDead(false);
         }
     }
     private void ResetToDefault()
@@ -60,10 +62,14 @@ public class Enemy : MonoBehaviour
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         SetHealth(INIT_HEALTH);
     }
-    private void SetHealth(int health){
+    public void SetHealth(int health){
         _health = health;
         _healthText.text = string.Format("{0}", health);
     }
+    public void SetSpeed(float speed){
+        _speed = speed;
+    }
+
     private void OnGetHit()
     {
         Vector3 textChangePos = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z + 1.5f);
@@ -80,9 +86,13 @@ public class Enemy : MonoBehaviour
             OnDead();
         }
     }
-    private void OnDead()
+    private void OnDead(bool isKilled = true)
     {
-        EazySoundManager.PlaySound(Sounds.Instance.Sfx_Collect_Coin);
+        /* Nếu enemy bị giết bởi Player hoặc do va chạm với Player chứ ko phải do đã chạy hết đường */
+        if(isKilled == true){
+            EazySoundManager.PlaySound(Sounds.Instance.Sfx_Collect_Coin);
+        }
+        
         EnemySpawner.Instance.RemoveEnemyInList(this);
         Destroy(gameObject);
     }

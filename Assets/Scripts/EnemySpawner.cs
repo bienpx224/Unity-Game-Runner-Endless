@@ -45,6 +45,8 @@ public class EnemySpawner : Singleton<EnemySpawner>
         Vector3 enemyPosition = new Vector3(Random.Range(-0.5f, 1.5f), _spawnPoint.position.y, _spawnPoint.position.z);
         
         Enemy enemy = LeanPool.Spawn(_prefabEnemy, enemyPosition, Quaternion.identity).GetComponent<Enemy>();
+        enemy.SetHealth(Random.Range(5,100));
+        enemy.SetSpeed(Random.Range(4f,10f));
         _listSpawning.Add(enemy);
         enemy.Run(PlayerController.Instance.gameObject.transform);
         yield return null;

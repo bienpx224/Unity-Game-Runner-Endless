@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 7920068142669624827}
   m_Layer: 0
   m_Name: EnemyTurtleShell
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
   _healthText: {fileID: 1356319780}
   _prefabTextChange: {fileID: 1659230425904924105, guid: 98193a2ff8cda437e90e25b42cbf9a00,
     type: 3}
-  _speed: 8
+  _speed: 5
   _health: 15
   _animator: {fileID: 6743400848667893326}
 --- !u!1 &6683561075920114840
